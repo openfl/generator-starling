@@ -1,6 +1,6 @@
 {
   "name": "generator-starling-framework",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generator for Starling Framework NPM-based projects",
   "homepage": "http://github.com/openfl",
   "contributors": [

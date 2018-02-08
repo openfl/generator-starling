@@ -2,6 +2,7 @@
 var Sprite = require ("openfl/display/Sprite").default;
 var Stage = require ("openfl/display/Stage").default;
 var Starling = require ("starling/core/Starling").default;
+var Game = require ("./game").default;
 
 
 var App = function () {
