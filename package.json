@@ -1,5 +1,5 @@
 {
-  "name": "generator-starling",
+  "name": "generator-starling-framework",
   "version": "1.0.0",
   "description": "Generator for Starling Framework NPM-based projects",
   "homepage": "http://github.com/openfl",
@@ -82,6 +82,6 @@
       "prettier"
     ]
   },
-  "repository": "openfl/generator-starling",
+  "repository": "openfl/generator-starling-framework",
   "license": "MIT"
 }
