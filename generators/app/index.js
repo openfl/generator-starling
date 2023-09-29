@@ -1,7 +1,5 @@
 'use strict';
 const Generator = require ("yeoman-generator");
-const chalk = require ("chalk");
-const yosay = require ("yosay");
 
 module.exports = class extends Generator {
 	
@@ -28,7 +26,7 @@ module.exports = class extends Generator {
 			type: "list",
 			name: "language",
 			message: "Source language",
-			choices: [ "TypeScript", "Haxe", "ES6/JavaScript", "ES5/JavaScript" ],
+			choices: [ "TypeScript", "Haxe", "ES6/JavaScript", "ES5/JavaScript", "AS3/Royale" ],
 			default: "TypeScript"
 		}];
 		
@@ -56,12 +54,6 @@ module.exports = class extends Generator {
 					this.destinationRoot (),
 					templateContext
 				)
-				this.fs.copyTpl (
-					this.templatePath ("es5/.*"),
-					this.destinationRoot (),
-					templateContext
-				)
-				break;
 			
 			case "ES6/JavaScript":
 				this.fs.copyTpl (
@@ -69,8 +61,11 @@ module.exports = class extends Generator {
 					this.destinationRoot (),
 					templateContext
 				)
+				break;
+				
+			case "AS3/Royale":
 				this.fs.copyTpl (
-					this.templatePath ("es6/.*"),
+					this.templatePath ("as3/**/*"),
 					this.destinationRoot (),
 					templateContext
 				)
@@ -82,21 +77,11 @@ module.exports = class extends Generator {
 					this.destinationRoot (),
 					templateContext
 				)
-				this.fs.copyTpl (
-					this.templatePath ("haxe/.*"),
-					this.destinationRoot (),
-					templateContext
-				)
 				break;
 			
 			case "TypeScript":
 				this.fs.copyTpl (
 					this.templatePath ("typescript/**/*"),
-					this.destinationRoot (),
-					templateContext
-				)
-				this.fs.copyTpl (
-					this.templatePath ("typescript/.*"),
 					this.destinationRoot (),
 					templateContext
 				)
@@ -108,9 +93,8 @@ module.exports = class extends Generator {
 	
 	install () {
 		
-		//this.installDependencies ();
-		this.npmInstall ();
-		
+		const packageJson = {}
+		this.fs.extendJSON(this.destinationPath('package.json'), packageJson)
+		this.spawnCommand('npm', 'install')
 	}
-	
 };

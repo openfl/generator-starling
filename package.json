@@ -1,11 +1,12 @@
 {
   "name": "generator-starling-framework",
-  "version": "1.0.1",
-  "description": "Generator for Starling Framework NPM-based projects",
-  "homepage": "http://github.com/openfl",
+  "version": "1.0.9",
+  "description": "Generator for OpenFL ES5, ES6, TypeScript, Haxe or AS3 NPM-based projects",
+  "homepage": "https://www.openfl.org/",
   "contributors": [
-    "Joshua Granick"
-  ],
+    "Joshua Granick",
+    "Other OpenFL contributors" 
+],
   "files": [
     "generators"
   ],
@@ -16,71 +17,19 @@
     "openfl",
     "es5",
     "es6",
+    "ts",
     "typescript",
     "haxe",
+    "as3",
     "generator",
     "template",
     "yeoman-generator"
   ],
-  "devDependencies": {
-    "yeoman-test": "^1.7.0",
-    "yeoman-assert": "^3.1.0",
-    "nsp": "^2.6.3",
-    "eslint": "^4.1.0",
-    "prettier": "^1.7.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^4.2.1",
-    "eslint-config-prettier": "^2.4.0",
-    "eslint-plugin-prettier": "^2.2.0",
-    "eslint-config-xo": "^0.18.2",
-    "jest": "^21.0.0",
-    "jest-cli": "^21.0.0"
+  "engines": {
+    "npm": ">= 4.0.0"
   },
   "dependencies": {
-    "yeoman-generator": "^2.0.1",
-    "chalk": "^2.1.0",
-    "yosay": "^2.0.1"
-  },
-  "jest": {
-    "testEnvironment": "node"
-  },
-  "scripts": {
-    "prepublish": "nsp check",
-    "pretest": "eslint .",
-    "precommit": "lint-staged",
-    "test": "jest"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "xo",
-      "prettier"
-    ],
-    "env": {
-      "jest": true,
-      "node": true
-    },
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true,
-          "printWidth": 90
-        }
-      ]
-    },
-    "plugins": [
-      "prettier"
-    ]
+    "yeoman-generator": "^5.9.0"
   },
   "repository": "openfl/generator-starling-framework",
   "license": "MIT"
