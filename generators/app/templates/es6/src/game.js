@@ -1,19 +1,9 @@
 import Sprite from "starling/display/Sprite";
 
-
 class Game extends Sprite {
-	
-	
-	constructor () {
-		
-		super ();
-		
-		
-		
+	constructor() {
+		super();
 	}
-	
-	
 }
-
 
 export default Game;

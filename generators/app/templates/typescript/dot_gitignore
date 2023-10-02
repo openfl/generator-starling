@@ -1,3 +1,4 @@
 node_modules
-dist/app.js
+src/**/*.js
+dist/
 *.map
