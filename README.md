@@ -1,4 +1,4 @@
-# generator-starling-framework [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-starling-framework [![NPM version][npm-image]][npm-url]
 > Generator for Starling Framework NPM-based projects
 
 ## Installation
@@ -25,12 +25,8 @@ yo starling-framework
 
 ## License
 
-MIT © [Joshua Granick]()
+MIT © [Joshua Granick and OpenFL contributors](https://github.com/openfl/generator-starling-framework)
 
 
 [npm-image]: https://badge.fury.io/js/generator-starling-framework.svg
 [npm-url]: https://npmjs.org/package/generator-starling-framework
-[travis-image]: https://travis-ci.org/openfl/generator-starling-framework.svg?branch=master
-[travis-url]: https://travis-ci.org/openfl/generator-starling-framework
-[daviddm-image]: https://david-dm.org/openfl/generator-starling-framework.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/openfl/generator-starling-framework
